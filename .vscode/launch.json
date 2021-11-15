@@ -23,6 +23,25 @@
         "<node_internals>/**"
       ],
     },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run Test (NPM)",
+      "runtimeVersion": "14.17.0",
+      "cwd": "${workspaceFolder}",
+      "outputCapture": "std",
+      "env": {
+        "PORT": "8080"
+      },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "test"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+    },
 
   ]
 }

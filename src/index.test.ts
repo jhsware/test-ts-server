@@ -1,7 +1,13 @@
-import { multiply } from "."
+import { pong } from './server'
 
-describe("multiply", () => {
-  it("is return correct number?", () => {
-    expect(multiply(10, 6)).toBe(60)
+describe('route handler', () => {
+  it('returns pong', (done) => {
+    const mockRes = {
+      send: (outp) => {
+        expect(outp).toBe('pong')
+        done()
+      },
+    }
+    pong(undefined, mockRes)
   })
 })

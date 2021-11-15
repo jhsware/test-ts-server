@@ -3,9 +3,10 @@ import express from 'express'
 import { certificateFor } from 'devcert'
 import https from 'https'
 import http from 'http'
+import { pong, throwNow } from './server'
 
 const PORT = 8080
-const SSL = true
+const SSL = false
 
 dotenv.config()
 const server = express()
@@ -15,10 +16,8 @@ server.use((req, res, next) => {
   next()
 })
 
-server.get('/', (req, res) => {
-  return res.send('pong')
-})
-
+server.get('/', pong)
+server.get('/throw', throwNow)
 ;(async function main() {
   if (SSL) {
     const sslCerts = await certificateFor('localdev.kth.se', {
