@@ -1,5 +1,26 @@
 # Node.js Template Dependencies
 
+PoC of Node.js running mixed TypeScript code.
+
+- Development
+- Production
+- Build
+- Test
+
+1. Start server
+
+  npm run dev
+
+2. Go to endpoints
+
+  http://localhost:8080/
+  http://localhost:8080/js
+  http://localhost:8080/broken-link
+
+3. Edit code with hot restart
+
+## Some Refs
+
 <p align="center" style="margin-top: 30px;">
   <img alt="Node.js" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" width="100" style="margin-right: 10px;">
   <img alt="Typescript" src="https://cdn.worldvectorlogo.com/logos/typescript.svg" width="80" style="margin-left: 10px;">
