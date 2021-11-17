@@ -21,6 +21,12 @@ PoC of Node.js running mixed TypeScript code.
 ```
 3. Edit code with hot restart
 
+To switch from SWC to TSC-transpiler removed the following line in tsconfig.json:
+
+```
+"transpiler": "ts-node/transpilers/swc-experimental"
+```
+
 ## Some Refs to Underlying Technologies
 
 <p align="center" style="margin-top: 30px;">
