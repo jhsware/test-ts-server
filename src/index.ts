@@ -4,6 +4,7 @@ import { certificateFor } from 'devcert'
 import https from 'https'
 import http from 'http'
 import { pong, throwNow } from './server'
+import { pongJs } from './server-js.js'
 
 const PORT = 8080
 const SSL = false
@@ -12,11 +13,12 @@ dotenv.config()
 const server = express()
 
 server.use((req, res, next) => {
-  console.log(req.pathname)
+  console.log(`${req.method}: ${req.originalUrl}`)
   next()
 })
 
 server.get('/', pong)
+server.get('/js', pongJs)
 server.get('/throw', throwNow)
 ;(async function main() {
   if (SSL) {
