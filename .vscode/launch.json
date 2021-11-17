@@ -26,6 +26,65 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Run TS Start (NPM)",
+      "runtimeVersion": "14.17.0",
+      "cwd": "${workspaceFolder}",
+      "outputCapture": "std",
+      "env": {
+        "PORT": "8080"
+      },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "start-ts"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "PROD Run TS Start (NPM)",
+      "runtimeVersion": "14.17.0",
+      "cwd": "${workspaceFolder}",
+      "outputCapture": "std",
+      "env": {
+        "PORT": "8080",
+        "NODE_ENV": "production"
+      },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "start-ts"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run Start (NPM)",
+      "runtimeVersion": "14.17.0",
+      "cwd": "${workspaceFolder}",
+      "outputCapture": "std",
+      "env": {
+        "PORT": "8080",
+        "NODE_ENV": "production"
+      },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Run Test (NPM)",
       "runtimeVersion": "14.17.0",
       "cwd": "${workspaceFolder}",
